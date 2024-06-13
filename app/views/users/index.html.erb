@@ -1,4 +1,7 @@
 <h1>User</h1>
+<%#= turbo_frame_tag "counter" do %>
+  <%= render "notice", message: '' %>
+<%# end %>
 
 <table class="table table-hover">
   <thead class="thead-dark">
@@ -15,9 +18,15 @@
         <td><%= user.name %></td>
         <td><%= user.email %></td>
         <td><%= user.number %></td>
+        <td><%= button_to "Download", create_order_history_user_path(user), method: :post, form: {"data-type": "turbo_stream" } %></td>
+
+        <td> <%#= link_to "Download", create_order_history_user_path(user), class: "btn btn-secondary" %></td>
+        <td> <%#= link_to "Download", create_order_history_user_path(user), data: { turbo_method: 'post' }, class: "btn btn-secondary" %></td>
+        <td> <%#= link_to "Download", create_order_history_user_path(user), data: { remote: true, 'download-orders': true, id: user.id }, class: "btn btn-secondary" %></td>
       </tr>
     <% end %>
 </table>
 
 <%= paginate @users %>
 
+<%= javascript_include_tag 'download_order_history' %>

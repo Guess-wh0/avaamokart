@@ -1,0 +1,8 @@
+<%= turbo_frame_tag "counter" do %>
+  <% if message.present? %>
+    <div class="alert alert-primary" role="alert">
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
