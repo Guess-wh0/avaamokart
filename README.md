@@ -1,24 +1,29 @@
-# README
+ruby '3.1.0'
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
+gem 'rails', '~> 6.1.3'
+# Use sqlite3 as the database for Active Record
+gem 'sqlite3', '~> 1.4'
 
-Things you may want to cover:
+* Ruby version 3.1.0
+* Sqlite
+* Redis-Server
 
-* Ruby version
+*bundle install
+*yarn install
 
-* System dependencies
+**Seed Commands**
+rails seed:users
+rails seed:products
+rails seed:orders
 
-* Configuration
+**Servers**
+./bin/webpack-dev-server
+rails s
+redis-server
+bundle exec sidekiq
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+**Can Be Worked On**
+Name of file downloaded
+Batch creation of csv files
+Deletion of files after time interval

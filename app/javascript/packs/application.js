@@ -11,3 +11,7 @@ import "channels"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+require("channels")
+
+import 'bootstrap/dist/js/bootstrap';
+import $ from 'jquery';
